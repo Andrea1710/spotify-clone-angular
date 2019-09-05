@@ -13,7 +13,7 @@
     </p>
   </div>
   <div class="col-4 text-right">
-    <button routerLink="/search" class="btn btn-outline-danger">
+    <button routerLink="/home" class="btn btn-outline-danger">
       Go Back
     </button>
   </div>
@@ -36,7 +36,14 @@
           <td>{{ topTrack.album.name }}</td>
           <td>{{ topTrack.name }}</td>
           <td>
-            <audio [src]="topTrack.preview_url" controls></audio>
+            <iframe
+              [src]="topTrack.uri | safedom"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
           </td>
         </tr>
       </tbody>

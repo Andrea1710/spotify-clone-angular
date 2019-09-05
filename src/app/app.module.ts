@@ -1,3 +1,4 @@
+import {SafeDomPipe} from './pipes/safe-dom.pipe';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
@@ -9,14 +10,14 @@ import {HomeComponent} from './components/home/home.component';
 import {SearchComponent} from './components/search/search.component';
 import {ArtistComponent} from './components/artist/artist.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
+import {CardsComponent} from './components/cards/cards.component';
+import {LoaderComponent} from './components/shared/loader/loader.component';
 
 // Routes
 import {ROUTES} from './app.routes';
 
 // Pipes
 import {NoImagePipe} from './pipes/no-image.pipe';
-import { CardsComponent } from './components/cards/cards.component';
-import { LoaderComponent } from './components/shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     ArtistComponent,
     NavbarComponent,
     NoImagePipe,
+    SafeDomPipe,
     CardsComponent,
     LoaderComponent,
   ],
